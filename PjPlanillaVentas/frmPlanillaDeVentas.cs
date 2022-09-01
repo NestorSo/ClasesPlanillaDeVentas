@@ -17,6 +17,12 @@ namespace PjPlanillaVentas
             InitializeComponent();
         }
 
-       
+        private void frmPlanillaDeVentas_Load(object sender, EventArgs e)
+        {
+            lblFecha.Text = DateTime.Now.ToShortDateString();
+            
+        }
+
+
     }
 }

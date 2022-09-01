@@ -32,28 +32,30 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cboProducto = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEstadisticas = new System.Windows.Forms.Button();
+            this.lvEstadisticas = new System.Windows.Forms.ListView();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtNcedula = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Precio = new System.Windows.Forms.Label();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.Cantdad = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.label11 = new System.Windows.Forms.Label();
+            this.Cantdad = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.lbl5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lvFactura = new System.Windows.Forms.ListView();
+            this.lblNfactura = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtImporte = new System.Windows.Forms.Label();
+            this.lblImporte = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +80,11 @@
             // cboProducto
             // 
             this.cboProducto.FormattingEnabled = true;
+            this.cboProducto.Items.AddRange(new object[] {
+            "PS5 + 1 Mando",
+            "PS4 + 1 Mando",
+            "Mando PS5",
+            "Mando PS4"});
             this.cboProducto.Location = new System.Drawing.Point(29, 61);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(176, 23);
@@ -92,14 +99,14 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Nombre";
             // 
-            // label4
+            // lblFecha
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(748, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 15);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(779, 9);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(38, 15);
+            this.lblFecha.TabIndex = 4;
+            this.lblFecha.Text = "label4";
             // 
             // label5
             // 
@@ -128,31 +135,31 @@
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnSalir
             // 
-            this.button3.Location = new System.Drawing.Point(54, 600);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Salir";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSalir.Location = new System.Drawing.Point(54, 600);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 9;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnEstadisticas
             // 
-            this.button4.Location = new System.Drawing.Point(54, 403);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(137, 23);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Mostrar Estadisticas";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnEstadisticas.Location = new System.Drawing.Point(54, 403);
+            this.btnEstadisticas.Name = "btnEstadisticas";
+            this.btnEstadisticas.Size = new System.Drawing.Size(137, 23);
+            this.btnEstadisticas.TabIndex = 10;
+            this.btnEstadisticas.Text = "Registrar Boleta";
+            this.btnEstadisticas.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // lvEstadisticas
             // 
-            this.listView1.Location = new System.Drawing.Point(54, 447);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(565, 136);
-            this.listView1.TabIndex = 11;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lvEstadisticas.Location = new System.Drawing.Point(54, 447);
+            this.lvEstadisticas.Name = "lvEstadisticas";
+            this.lvEstadisticas.Size = new System.Drawing.Size(565, 136);
+            this.lvEstadisticas.TabIndex = 11;
+            this.lvEstadisticas.UseCompatibleStateImageBehavior = false;
             // 
             // label7
             // 
@@ -196,7 +203,7 @@
             this.groupBox1.Controls.Add(this.txtCantidad);
             this.groupBox1.Controls.Add(this.Cantdad);
             this.groupBox1.Controls.Add(this.txtPrecio);
-            this.groupBox1.Controls.Add(this.Precio);
+            this.groupBox1.Controls.Add(this.lbl5);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.cboProducto);
             this.groupBox1.Controls.Add(this.btnRegistrar);
@@ -207,6 +214,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(381, 61);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 23);
+            this.txtCantidad.TabIndex = 7;
+            // 
+            // Cantdad
+            // 
+            this.Cantdad.AutoSize = true;
+            this.Cantdad.Location = new System.Drawing.Point(381, 29);
+            this.Cantdad.Name = "Cantdad";
+            this.Cantdad.Size = new System.Drawing.Size(55, 15);
+            this.Cantdad.TabIndex = 6;
+            this.Cantdad.Text = "Cantidad";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Enabled = false;
+            this.txtPrecio.Location = new System.Drawing.Point(245, 61);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 23);
+            this.txtPrecio.TabIndex = 5;
+            // 
+            // lbl5
+            // 
+            this.lbl5.AutoSize = true;
+            this.lbl5.Location = new System.Drawing.Point(245, 29);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(40, 15);
+            this.lbl5.TabIndex = 4;
+            this.lbl5.Text = "Precio";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -216,54 +256,22 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "Producto";
             // 
-            // Precio
+            // lvFactura
             // 
-            this.Precio.AutoSize = true;
-            this.Precio.Location = new System.Drawing.Point(245, 29);
-            this.Precio.Name = "Precio";
-            this.Precio.Size = new System.Drawing.Size(38, 15);
-            this.Precio.TabIndex = 4;
-            this.Precio.Text = "label9";
+            this.lvFactura.Location = new System.Drawing.Point(54, 268);
+            this.lvFactura.Name = "lvFactura";
+            this.lvFactura.Size = new System.Drawing.Size(675, 129);
+            this.lvFactura.TabIndex = 18;
+            this.lvFactura.UseCompatibleStateImageBehavior = false;
             // 
-            // txtPrecio
+            // lblNfactura
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(245, 61);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 23);
-            this.txtPrecio.TabIndex = 5;
-            // 
-            // Cantdad
-            // 
-            this.Cantdad.AutoSize = true;
-            this.Cantdad.Location = new System.Drawing.Point(381, 29);
-            this.Cantdad.Name = "Cantdad";
-            this.Cantdad.Size = new System.Drawing.Size(44, 15);
-            this.Cantdad.TabIndex = 6;
-            this.Cantdad.Text = "label10";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(381, 61);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 23);
-            this.txtCantidad.TabIndex = 7;
-            // 
-            // listView2
-            // 
-            this.listView2.Location = new System.Drawing.Point(54, 268);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(675, 129);
-            this.listView2.TabIndex = 18;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(54, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 15);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "label11";
+            this.lblNfactura.AutoSize = true;
+            this.lblNfactura.Location = new System.Drawing.Point(120, 9);
+            this.lblNfactura.Name = "lblNfactura";
+            this.lblNfactura.Size = new System.Drawing.Size(44, 15);
+            this.lblNfactura.TabIndex = 19;
+            this.lblNfactura.Text = "label11";
             // 
             // label9
             // 
@@ -274,41 +282,62 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Importe";
             // 
-            // txtImporte
+            // lblImporte
             // 
-            this.txtImporte.AutoSize = true;
-            this.txtImporte.Location = new System.Drawing.Point(109, 250);
-            this.txtImporte.Name = "txtImporte";
-            this.txtImporte.Size = new System.Drawing.Size(44, 15);
-            this.txtImporte.TabIndex = 21;
-            this.txtImporte.Text = "label10";
+            this.lblImporte.AutoSize = true;
+            this.lblImporte.Location = new System.Drawing.Point(109, 250);
+            this.lblImporte.Name = "lblImporte";
+            this.lblImporte.Size = new System.Drawing.Size(44, 15);
+            this.lblImporte.TabIndex = 21;
+            this.lblImporte.Text = "label10";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(705, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 15);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Fecha Actual";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(54, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 15);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "N°Factura";
             // 
             // frmPlanillaDeVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 657);
-            this.Controls.Add(this.txtImporte);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblImporte);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.lblNfactura);
+            this.Controls.Add(this.lvFactura);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.txtNcedula);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.lvEstadisticas);
+            this.Controls.Add(this.btnEstadisticas);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmPlanillaDeVentas";
             this.Text = "Planilla De Ventas ";
+            this.Load += new System.EventHandler(this.frmPlanillaDeVentas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -322,13 +351,13 @@
         private Label label2;
         private ComboBox cboProducto;
         private Label label3;
-        private Label label4;
+        private Label lblFecha;
         private Label label5;
         private Label label6;
         private Button btnRegistrar;
-        private Button button3;
-        private Button button4;
-        private ListView listView1;
+        private Button btnSalir;
+        private Button btnEstadisticas;
+        private ListView lvEstadisticas;
         private Label label7;
         private TextBox txtNombre;
         private TextBox txtNcedula;
@@ -338,11 +367,13 @@
         private TextBox txtCantidad;
         private Label Cantdad;
         private TextBox txtPrecio;
-        private Label Precio;
+        private Label lbl5;
         private Label label8;
-        private ListView listView2;
-        private Label label11;
+        private ListView lvFactura;
+        private Label lblNfactura;
         private Label label9;
-        private Label txtImporte;
+        private Label lblImporte;
+        private Label label4;
+        private Label label10;
     }
 }
