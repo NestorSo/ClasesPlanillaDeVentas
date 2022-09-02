@@ -8,13 +8,13 @@ namespace PjPlanillaVentas
 {
     public class Planilla
     {
-        public string Nombre { get; set; }
-        public string direcccion  { get; set; }
+        public string? Cliente { get; set; }
+        public string? direcccion  { get; set; }
         public double Nboleta { get; set; }
         public DateTime fechacompra { get; set; }
 
-        public string nCedula { get; set; }
-        public string producto { get; set; }
+        public string ?nCedula { get; set; }
+        public string ?producto { get; set; }
         public int cantidad { get; set; }
 
 
