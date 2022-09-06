@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace PjPlanillaVentas
         int num;
         ListViewItem? item;
         //objeto de la clase 
-        Planilla obj = new Planilla();
+        Boleta obj = new Boleta();
         public frmPlanillaDeVentas()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace PjPlanillaVentas
         {
             MostrarFecha();
             MostrarNboleta();
-            lblImporte.Text = (0).ToString();
+            lblImporte.Text = (0).ToString("C");
         }
 
         private void MostrarNboleta()
@@ -57,6 +58,7 @@ namespace PjPlanillaVentas
             obj.nCedula = txtNcedula.Text;
             obj.producto = cboProducto.Text;
             obj.cantidad = int.Parse(txtCantidad.Text);
+
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -74,13 +76,13 @@ namespace PjPlanillaVentas
                 ImprimirDetalle(precio, importe);
 
                 // Imprimir el total acumulado
-                lblImporte.Text = DeterminaTotal().ToString();
+                lblImporte.Text = DeterminaTotal().ToString("C");
             }
             else
                 MessageBox.Show("El error se encuentra en " + Valida());
         }
 
-        private object DeterminaTotal()
+        private double DeterminaTotal()
         {
 
             double total = 0;
@@ -142,7 +144,7 @@ namespace PjPlanillaVentas
             if (r == DialogResult.Yes)
             {
                 lvFactura.Items.Remove(item);
-                lblImporte.Text = DeterminaTotal().ToString();
+                lblImporte.Text = DeterminaTotal().ToString("C");
                 MessageBox.Show("¡Detalle eliminado correctamente!");
             }
 
@@ -155,13 +157,13 @@ namespace PjPlanillaVentas
         {
             ListViewItem fila = new ListViewItem(int.Parse(lblNfactura.Text).ToString("D5"));
             fila.SubItems.Add(txtFecha.Text);
-            fila.SubItems.Add(TotalCantidad().ToString());
-            fila.SubItems.Add(DeterminaTotal().ToString());
+            fila.SubItems.Add(TotalCantidad().ToString("C"));
+            fila.SubItems.Add(DeterminaTotal().ToString("C"));
             lvEstadisticas.Items.Add(fila);
             LimpiarControles();
         }
 
-        private object TotalCantidad()
+        private double TotalCantidad()
         {
             int total = 0;
             for (int i = 0; i < lvFactura.Items.Count; i++)
@@ -183,7 +185,9 @@ namespace PjPlanillaVentas
             txtCantidad.Clear();
             lblImporte.Text = (0).ToString("C");
             lvFactura.Items.Clear();
+
         }
+
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
